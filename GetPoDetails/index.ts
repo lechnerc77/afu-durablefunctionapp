@@ -35,4 +35,4 @@ async function getPurchaseOrderItemDetails(
         })
 }
 
-export default activityFunction;
+export default activityFunction

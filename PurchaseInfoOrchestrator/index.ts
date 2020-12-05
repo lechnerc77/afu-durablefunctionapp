@@ -11,6 +11,6 @@ const orchestrator = df.orchestrator(function* (context) {
 
     return productGroupInfo
 
-});
+})
 
-export default orchestrator;
+export default orchestrator

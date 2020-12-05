@@ -40,4 +40,4 @@ async function getProductGroupText(
         })
 }
 
-export default activityFunction;
+export default activityFunction

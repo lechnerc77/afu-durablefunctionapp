@@ -6,5 +6,5 @@ export interface ProductGroupInfo {
 }
 
 export interface MaterialGroupData {
-    materialGroupId: string;
+    materialGroupId: string
 }
