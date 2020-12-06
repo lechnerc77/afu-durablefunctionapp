@@ -3,6 +3,8 @@ import { PurchaseOrderItem } from "@sap/cloud-sdk-vdm-purchase-order-service"
 
 const activityFunction: AzureFunction = async function (context: Context): Promise<JSON> {
 
+    await sleep(10000)
+
     try {
         let purchaseOrderItemDetails = await getPurchaseOrderItemDetails({ purchaseOrderId: context.bindingData.purchaseOrderId.toString(), purchaseOrderItemId: context.bindingData.purchaseOrderItemId.toString() })
 
@@ -16,6 +18,11 @@ const activityFunction: AzureFunction = async function (context: Context): Promi
         throw error
     }
 
+}
+
+
+async function sleep(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms))
 }
 
 async function getPurchaseOrderItemDetails(
